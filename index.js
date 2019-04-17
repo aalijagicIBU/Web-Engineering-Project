@@ -3,9 +3,11 @@ var app = express();
 
 app.use(express.static('public'));
 
+var port = process.env.PORT || 3000;
+
 app.get('/library', function (req, res) {
   res.send('Welcome to your library!');
 });
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(port, function () {
+  console.log('Example app listening on port'+port+'!');
 });
