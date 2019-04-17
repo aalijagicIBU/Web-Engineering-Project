@@ -1,5 +1,37 @@
-<html>
-    <body>
-        <h1> Bookworm corner </h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en-US">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="js/BooksController.js"></script>
+<script>
+var app = angular.module('libraryApplication', []);
+app.controller('BooksController', BooksController)
+</script>
+
+
+<body>
+
+<div ng-app="libraryApplication">
+  <h1>Library application </h1>
+<div ng-controller="BooksController">
+  <table class="table table-striped">
+      <thead>
+          <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Publisher</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="book in books_list">
+              <td>{{book.title}}</td>
+              <td>{{book.author}}</td>
+              <td>{{book.publisher}}</td>
+          </tr>
+      </tbody> 
+  </table>
+</div>
+</div>
+
+</body>
 </html>
