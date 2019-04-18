@@ -23,7 +23,6 @@ app.get('/books', function (req, res) {
   db.books.find(function (err, docs) {
     res.send(docs);
   })
-
 });
 
 app.listen(port, function () {
