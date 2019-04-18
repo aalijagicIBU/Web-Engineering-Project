@@ -12,14 +12,14 @@ app.controller('BooksController', BooksController)
 <body>
 
 <div ng-app="libraryApplication">
-  <h1>Library application </h1>
+  <h2>Library Application </h2>
 <div ng-controller="BooksController">
-  <table class="table table-striped">
-      <thead>
+  <table class="table">
+      <thead class="thead-dark">
           <tr>
-              <th>Title</th>
-              <th>Author</th>
-              <th>Publisher</th>
+              <th scope="col" >Title</th>
+              <th scope="col">Author</th>
+              <th scope="col" >Publisher</th>
           </tr>
       </thead>
       <tbody>
